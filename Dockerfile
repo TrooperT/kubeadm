@@ -10,7 +10,7 @@ WORKDIR /downloads
 # EOF
 
 COPY get.sh /downloads/get.sh
-RUN "/bin/sh -c /downloads/get.sh"
+RUN /bin/sh -c /downloads/get.sh
 
-FROM busybox:latest
+FROM alpine:latest
 COPY --from=downloads --chown=root:root /downloads/kubeadm /usr/bin/kubeadm
