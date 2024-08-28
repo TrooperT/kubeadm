@@ -1,4 +1,4 @@
-FROM docker:latest as downloads
+FROM docker:latest AS downloads
 WORKDIR /downloads
 # COPY <<EOF /downloads/get.sh
 # #!/bin/sh
