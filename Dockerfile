@@ -14,3 +14,4 @@ RUN /bin/sh -c /downloads/get.sh
 
 FROM alpine:latest
 COPY --from=downloads --chown=root:root /downloads/kubeadm /usr/bin/kubeadm
+COPY generate-kubeconfig /usr/bin/generate-kubeconfig
